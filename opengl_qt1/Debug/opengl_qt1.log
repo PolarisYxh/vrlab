@@ -1,0 +1,7 @@
+﻿  Reading Qt configuration (ERROR: Qt install dir not found\bin\qmake.exe)
+opengl_qt1.vcxproj : error : ERROR running qmake
+opengl_qt1.vcxproj : error : qmake: (ERROR: Qt install dir not found\bin\qmake.exe)
+opengl_qt1.vcxproj : error : qmake: $PWD=C:\Users\yxh\AppData\Local\Temp\k4vt1rju.2su
+opengl_qt1.vcxproj : error : qmake: �ļ�����Ŀ¼�������﷨����ȷ��
+opengl_qt1.vcxproj : error : qmake: Error creating Makefile
+opengl_qt1.vcxproj : error : 

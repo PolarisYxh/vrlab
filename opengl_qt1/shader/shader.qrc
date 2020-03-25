@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>triangle.frag</file>
+        <file>triangle.vert</file>
+        <file>colortriangle.frag</file>
+        <file>colortriangle.vert</file>
+        <file>textures.frag</file>
+        <file>textures.vert</file>
+        <file>basic_lighting.frag</file>
+        <file>basic_lighting.vert</file>
+        <file>lamp.frag</file>
+        <file>lamp.vert</file>
+        <file>lighting_maps.frag</file>
+        <file>lighting_maps.vert</file>
+    </qresource>
+</RCC>

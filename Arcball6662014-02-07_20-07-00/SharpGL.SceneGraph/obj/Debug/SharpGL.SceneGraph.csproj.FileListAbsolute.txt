@@ -1,0 +1,8 @@
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL.SceneGraph\bin\Debug\SharpGL.SceneGraph.dll
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL.SceneGraph\bin\Debug\SharpGL.SceneGraph.pdb
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL.SceneGraph\bin\Debug\SharpGL.dll
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL.SceneGraph\bin\Debug\SharpGL.pdb
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL.SceneGraph\obj\Debug\SharpGL.SceneGraph.csprojAssemblyReference.cache
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL.SceneGraph\obj\Debug\SharpGL.SceneGraph.csproj.CopyComplete
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL.SceneGraph\obj\Debug\SharpGL.SceneGraph.dll
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL.SceneGraph\obj\Debug\SharpGL.SceneGraph.pdb

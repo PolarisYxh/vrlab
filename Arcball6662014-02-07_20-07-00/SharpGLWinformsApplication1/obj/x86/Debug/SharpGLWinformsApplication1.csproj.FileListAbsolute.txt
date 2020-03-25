@@ -1,0 +1,16 @@
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\bin\Debug\SharpGLWinformsApplication1.exe.config
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\bin\Debug\SharpGLWinformsApplication1.exe
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\bin\Debug\SharpGLWinformsApplication1.pdb
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\bin\Debug\SharpGL.dll
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\bin\Debug\SharpGL.SceneGraph.dll
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\bin\Debug\SharpGL.WinForms.dll
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\bin\Debug\SharpGL.SceneGraph.pdb
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\bin\Debug\SharpGL.WinForms.pdb
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\bin\Debug\SharpGL.pdb
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\obj\x86\Debug\SharpGLWinformsApplication1.csprojAssemblyReference.cache
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\obj\x86\Debug\SharpGLWinformsApplication1.FormMain.resources
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\obj\x86\Debug\SharpGLWinformsApplication1.Properties.Resources.resources
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\obj\x86\Debug\SharpGLWinformsApplication1.csproj.GenerateResource.cache
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\obj\x86\Debug\SharpGLWinformsApplication1.csproj.CopyComplete
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\obj\x86\Debug\SharpGLWinformsApplication1.exe
+D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGLWinformsApplication1\obj\x86\Debug\SharpGLWinformsApplication1.pdb

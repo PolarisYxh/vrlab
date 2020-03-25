@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>wall.jpg</file>
+        <file>awesomeface.png</file>
+        <file>container.jpg</file>
+        <file>container2.png</file>
+        <file>container2_specular.png</file>
+    </qresource>
+</RCC>

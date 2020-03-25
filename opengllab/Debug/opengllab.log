@@ -1,0 +1,8 @@
+﻿  3ds.cpp
+D:\homework\vrlab\opengllab\3ds.cpp(25,17): warning C4018: “<”: 有符号/无符号不匹配
+D:\homework\vrlab\opengllab\3ds.cpp(161,19): warning C4018: “<”: 有符号/无符号不匹配
+D:\homework\vrlab\opengllab\3ds.cpp(241,17): warning C4018: “<”: 有符号/无符号不匹配
+  Scene.cpp
+  正在生成代码...
+D:\homework\vrlab\opengllab\3ds.cpp(255,17): warning C4018: “<”: 有符号/无符号不匹配
+  opengllab.vcxproj -> D:\homework\vrlab\opengllab\Debug\opengllab.exe
