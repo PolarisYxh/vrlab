@@ -18,6 +18,8 @@
 #include <string>
 #include "Camera.h"
 #include "ArcBall.h"
+#include "mass-spring.h"
+#include "MassSpringCuda.cuh"
 class QtFunctionWidget1 : public QOpenGLWidget//, protected QOpenGLFunctions
 {
 public:
@@ -28,6 +30,7 @@ protected:
 	virtual void initializeGL() Q_DECL_OVERRIDE;
 	virtual void resizeGL(int w, int h) Q_DECL_OVERRIDE;
 	virtual void paintGL() Q_DECL_OVERRIDE;
+	void rendermodel();//导入的obj等格式模型的显示
 
 	void keyPressEvent(QKeyEvent* event) Q_DECL_OVERRIDE;
 	void keyReleaseEvent(QKeyEvent* event) Q_DECL_OVERRIDE;
@@ -36,11 +39,11 @@ protected:
 	void mouseMoveEvent(QMouseEvent* event) Q_DECL_OVERRIDE;
 	void wheelEvent(QWheelEvent* event) Q_DECL_OVERRIDE;
 private:
-	QOpenGLShaderProgram shaderProgram;
-	QOpenGLBuffer vbo;
-	QOpenGLVertexArrayObject vao;
-	QOpenGLTexture* texture1 = nullptr;
-	QOpenGLTexture* texture2 = nullptr;
+	//QOpenGLShaderProgram shaderProgram;
+	//QOpenGLBuffer vbo;
+	//QOpenGLVertexArrayObject vao;
+	//QOpenGLTexture* texture1 = nullptr;
+	//QOpenGLTexture* texture2 = nullptr;
 	std::string ModelPath, vShaderPath, fShaderPath;
 	Model *ourModel; 
 	Shader *ourShader;
@@ -54,6 +57,8 @@ private:
 	bool m_bRightPressed;
 	QPoint m_lastPos;
 	CArcBall arcball;
+	MassSpring *m;
+	MassSpringCuda* cm;
 };
 
 #endif // QTFUNCTIONWIDGET_H#pragma once

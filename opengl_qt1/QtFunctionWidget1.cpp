@@ -3,7 +3,8 @@
 QtFunctionWidget1::QtFunctionWidget1( std::string MP, std::string vSP, std::string fSP,QWidget* parent) :
 	ModelPath(MP), vShaderPath(vSP), fShaderPath(fSP),QOpenGLWidget(parent)
 {
-	camera = std::make_unique<Camera>(QVector3D(0.0f, 0.0f, 30.0f));
+	//camera = std::make_unique<Camera>(QVector3D(0.0f, 0.0f, 20.0f));
+	camera= std::make_unique<Camera>(QVector3D(0.0f, 5.0f, 10.0f));
 	m_bLeftPressed = false;
 
 	m_pTimer = new QTimer(this);
@@ -17,26 +18,32 @@ QtFunctionWidget1::QtFunctionWidget1( std::string MP, std::string vSP, std::stri
 QtFunctionWidget1::~QtFunctionWidget1() {
 	makeCurrent();
 
-	vbo.destroy();
-	vao.destroy();
+	//vbo.destroy();
+	//vao.destroy();
 
-	delete texture1;
-	delete texture2;
+	//delete texture1;
+	//delete texture2;
 
 	doneCurrent();
 }
 
 void QtFunctionWidget1::initializeGL() {
 	//this->initializeOpenGLFunctions();
+	// configure global opengl state
+	// -----------------------------
 	if (!gladLoadGL())//glad及其相关函数只有在initializeGL中才生效
 	{
 		qDebug() << "Failed to init glad!";
 	}
-	// configure global opengl state
-	// -----------------------------
-	glEnable(GL_DEPTH_TEST);
-	ourShader=new Shader(vShaderPath.c_str(), fShaderPath.c_str());
-	ourModel=new Model(ModelPath.c_str());
+	////load and show model
+	//glEnable(GL_DEPTH_TEST);
+	//ourShader=new Shader(vShaderPath.c_str(), fShaderPath.c_str());
+	//ourModel=new Model(ModelPath.c_str());
+	////mass spring simulate
+	m =new MassSpring(width(), height());
+	m->DemoInit();
+	//cm=new MassSpringCuda(width(), height());
+	//cm->DemoInit();
 }
 
 void QtFunctionWidget1::resizeGL(int w, int h) {
@@ -44,13 +51,29 @@ void QtFunctionWidget1::resizeGL(int w, int h) {
 }
 
 void QtFunctionWidget1::paintGL() {
+	/*rendermodel();*/
+	m->UpdateFrame();//for massspring simulate
+	//cm->UpdateFrame();
+}
+void QtFunctionWidget1::rendermodel()//for load and show model
+{
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // also clear the depth buffer now!
 
-	camera->processInput(1.0f);
+	camera->processInput(1.0f);//wasd键盘输入
 
 	ourShader->use();
-
+	ourShader->setVec4("Mat.aAmbient", 0.9f, 0.5f, 0.3f,1);
+	ourShader->setVec4("Mat.aDiffuse", 0.9f, 0.5f, 0.3f, 1);
+	ourShader->setVec4("Mat.aSpecular", 1.f, 1.f, 1.f, 1);
+	//light
+	ourShader->setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+	ourShader->setVec3("light.diffuse", 1.0f, 1.0f, 1.0f);
+	ourShader->setVec3("light.ambient", 1.0f, 1.0f, 1.0f);
+	//ourShader->setVec3("light.position", glm::vec3(-13,2,2));
+	ourShader->setVec3("light.position", glm::vec3(2, 5., 10));
+	ourShader->setVec3("viewPos", camera->position.x(), camera->position.y(), camera->position.z());
+	ourShader->setFloat("shininess", 100);
 	// view/projection transformations
 	QMatrix4x4 projection;
 	projection.perspective(camera->zoom, 1.0f * width() / height(), 0.1f, 100.f);
@@ -62,18 +85,24 @@ void QtFunctionWidget1::paintGL() {
 	QMatrix4x4 model,model1;
 	model1= arcball.getRotatonMatrix();
 	model.setToIdentity();
-	model.translate(-15.0f, -1.0f, 0.0f);// translate it down so it's at the center of the scene
-	model.scale(0.2f, 0.2f, 0.2f);// it's a bit too big for our scene, so scale it down
+	//model.translate(-15.0f, -1.0f, 0.0f);// translate it down so it's at the center of the scene
+	//model.scale(0.2f, 0.2f, 0.2f);// it's a bit too big for our scene, so scale it down
+	model.translate(0.0f, 0.0f, 0.0f);// translate it down so it's at the center of the scene
+	model.scale(0.5f, 0.5f, 0.5f);// it's a bit too big for our scene, so scale it down
 	model*=arcball.getRotatonMatrix();
 	ourShader->setMat4("model", model);
 	ourModel->Draw(*ourShader);
 }
-
 void QtFunctionWidget1::keyPressEvent(QKeyEvent* event)
 {
 	int key = event->key();
 	if (key >= 0 && key < 1024)
 		camera->keys[key] = true;
+	switch (event->key())
+	{
+		case Qt::Key_1:
+			m->setfixed(168,false);
+	}
 }
 
 void QtFunctionWidget1::keyReleaseEvent(QKeyEvent* event)

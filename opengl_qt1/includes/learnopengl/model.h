@@ -148,6 +148,20 @@ private:
 		}
 		// process materials
 		aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
+
+
+		Material mat;
+		aiColor3D color;
+
+		//读取mtl文件顶点光照ks，kd，ka数据
+
+		material->Get(AI_MATKEY_COLOR_AMBIENT, color);
+		mat.Ka = glm::vec4(color.r, color.g, color.b, 1.0);
+		material->Get(AI_MATKEY_COLOR_DIFFUSE, color);
+		mat.Kd = glm::vec4(color.r, color.g, color.b, 1.0);
+		material->Get(AI_MATKEY_COLOR_SPECULAR, color);
+		mat.Ks = glm::vec4(color.r, color.g, color.b, 1.0);
+
 		// we assume a convention for sampler names in the shaders. Each diffuse texture should be named
 		// as 'texture_diffuseN' where N is a sequential number ranging from 1 to MAX_SAMPLER_NUMBER. 
 		// Same applies to other texture as the following list summarizes:
@@ -169,7 +183,7 @@ private:
 		textures.insert(textures.end(), heightMaps.begin(), heightMaps.end());
 
 		// return a mesh object created from the extracted mesh data
-		return Mesh(vertices, indices, textures);
+		return Mesh(vertices, indices, textures,mat);
 	}
 
 	// checks all material textures of a given type and loads the textures if they're not loaded yet.
