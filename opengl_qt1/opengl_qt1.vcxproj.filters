@@ -23,15 +23,24 @@
       <Extensions>qrc;*</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
+    <Filter Include="Source Files\MassSpring">
+      <UniqueIdentifier>{3b92bb59-a8d7-417e-bebd-12498f27bba2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SoftDeform">
+      <UniqueIdentifier>{05996a6c-6339-4a41-8832-907a381babb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SoftDeform">
+      <UniqueIdentifier>{e3b44844-125d-4c97-86be-7b849af95f50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MassSpring">
+      <UniqueIdentifier>{9ab2cccf-0aa2-4813-a8dd-e0213332527a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="opengl_qt1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="glad.c">
@@ -46,29 +55,71 @@
     <ClCompile Include="ArcBall.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mass-spring.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TIMER.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Maths\COLOR.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Maths\MATRIX4X4.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\MassSpring</Filter>
     </ClCompile>
-    <ClCompile Include="Maths\PLANE.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="mass-spring.cpp">
+      <Filter>Source Files\MassSpring</Filter>
+    </ClCompile>
+    <ClCompile Include="TIMER.cpp">
+      <Filter>Source Files\MassSpring</Filter>
     </ClCompile>
     <ClCompile Include="Maths\VECTOR2D.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\MassSpring</Filter>
     </ClCompile>
     <ClCompile Include="Maths\VECTOR3D.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\MassSpring</Filter>
     </ClCompile>
     <ClCompile Include="Maths\VECTOR4D.cpp">
+      <Filter>Source Files\MassSpring</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\PLANE.cpp">
+      <Filter>Source Files\MassSpring</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftDeformCode\src\GLM.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftDeformCode\src\HapticDeviceConstraint.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftDeformCode\src\MouseSpringConstraint.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftDeformCode\src\NailConstraint.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftDeformCode\src\OdeSolver.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftDeformCode\src\Particle.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftDeformCode\src\ParticleSystem.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftDeformCode\src\SpringConstraint.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftDeformCode\src\tga.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftDeformCode\src\UnProjectUtilities.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="Obj2MassSpring.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="raypicking.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftDeformCode\src\MouseForceConstraint.cpp">
+      <Filter>Source Files\SoftDeform</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -90,34 +141,82 @@
     <ClInclude Include="QtFunctionWidget1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="includes\stb_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ArcBall.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mass-spring.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BALL.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="TIMER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BALL.h">
+      <Filter>Header Files\MassSpring</Filter>
+    </ClInclude>
     <ClInclude Include="SPRING.h">
+      <Filter>Header Files\MassSpring</Filter>
+    </ClInclude>
+    <ClInclude Include="mass-spring.h">
+      <Filter>Header Files\MassSpring</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths\VECTOR3D.h">
+      <Filter>Header Files\MassSpring</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\Constraint.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\DynamicsMath.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\GLM.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\HapticDeviceConstraint.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\MouseSpringConstraint.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\NailConstraint.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\OdeSolver.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\Particle.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\ParticleSystem.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\SpringConstraint.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\tga.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\UnProjectUtilities.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="Obj2MassSpring.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="raypicking.h">
+      <Filter>Header Files\SoftDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftDeformCode\include\MouseForceConstraint.h">
+      <Filter>Header Files\SoftDeform</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MassSpringCuda.cu">
-      <Filter>Source Files</Filter>
-    </None>
     <None Include="MassSpringCuda.cuh">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\MassSpring</Filter>
+    </None>
+    <None Include="MassSpringCuda.cu">
+      <Filter>Source Files\MassSpring</Filter>
     </None>
   </ItemGroup>
 </Project>

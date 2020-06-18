@@ -98,9 +98,9 @@ void Camera::updateCameraVectors()
 {
     // Calculate the new Front vector
     QVector3D front;
-    front.setX(cos(this->yaw) * cos(this->picth));
-    front.setY(sin(this->picth));
-    front.setZ(sin(this->yaw) * cos(this->picth));
+    front.setX(cos(glm::radians(this->yaw)) * cos(glm::radians(this->picth)));
+    front.setY(sin(glm::radians(this->picth)));
+    front.setZ(sin(glm::radians(this->yaw)) * cos(glm::radians(this->picth)));
     this->front = front.normalized();
     this->right = QVector3D::crossProduct(this->front, this->worldUp).normalized();
     this->up = QVector3D::crossProduct(this->right, this->front).normalized();

@@ -20,6 +20,8 @@
 #include "ArcBall.h"
 #include "mass-spring.h"
 #include "MassSpringCuda.cuh"
+#include "Obj2MassSpring.h"
+#include "UnProjectUtilities.h"
 class QtFunctionWidget1 : public QOpenGLWidget//, protected QOpenGLFunctions
 {
 public:
@@ -47,6 +49,7 @@ private:
 	std::string ModelPath, vShaderPath, fShaderPath;
 	Model *ourModel; 
 	Shader *ourShader;
+	Obj2MassSpring* ms;
 
 	QTimer* m_pTimer = nullptr;
 	int     m_nTimeValue = 0;
@@ -55,10 +58,18 @@ private:
 	std::unique_ptr<Camera> camera;
 	bool m_bLeftPressed;
 	bool m_bRightPressed;
+	bool m_CtrlPressed;
+	bool m_CtrlMove;
 	QPoint m_lastPos;
 	CArcBall arcball;
+	//matrix
+	QMatrix4x4 curprojection,curmodel, curview;
+	QVector3D curposition;
+	//massspring system
+	GLMmodel* ObjModel;
 	MassSpring *m;
 	MassSpringCuda* cm;
+	int initpoint;
 };
 
 #endif // QTFUNCTIONWIDGET_H#pragma once

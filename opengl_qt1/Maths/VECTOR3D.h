@@ -23,10 +23,10 @@ public:
 	VECTOR3D(void)	:	x(0.0f), y(0.0f), z(0.0f)
 	{}
 
-	VECTOR3D(float newX, float newY, float newZ)	:	x(newX), y(newY), z(newZ)
+	VECTOR3D(double newX, double newY, double newZ)	:	x(newX), y(newY), z(newZ)
 	{}
 
-	VECTOR3D(const float * rhs)	:	x(*rhs), y(*(rhs+1)), z(*(rhs+2))
+	VECTOR3D(const double * rhs)	:	x(*rhs), y(*(rhs+1)), z(*(rhs+2))
 	{}
 
 	VECTOR3D(const VECTOR3D & rhs)	:	x(rhs.x), y(rhs.y), z(rhs.z)
@@ -34,17 +34,17 @@ public:
 
 	~VECTOR3D() {}	//empty
 
-	void Set(float newX, float newY, float newZ)
+	void Set(double newX, double newY, double newZ)
 	{	x=newX;	y=newY;	z=newZ;	}
 	
 	//Accessors kept for compatibility
-	void SetX(float newX) {x = newX;}
-	void SetY(float newY) {y = newY;}
-	void SetZ(float newZ) {z = newZ;}
+	void SetX(double newX) {x = newX;}
+	void SetY(double newY) {y = newY;}
+	void SetZ(double newZ) {z = newZ;}
 
-	float GetX() const {return x;}	//public accessor functions
-	float GetY() const {return y;}	//inline, const
-	float GetZ() const {return z;}
+	double GetX() const {return x;}	//public accessor functions
+	double GetY() const {return y;}	//inline, const
+	double GetZ() const {return z;}
 
 	void LoadZero(void)
 	{	x=y=z=0.0f;	}
@@ -55,18 +55,27 @@ public:
 	VECTOR3D CrossProduct(const VECTOR3D & rhs) const
 	{	return VECTOR3D(y*rhs.z - z*rhs.y, z*rhs.x - x*rhs.z, x*rhs.y - y*rhs.x);	}
 
-	float DotProduct(const VECTOR3D & rhs) const
+	double DotProduct(const VECTOR3D & rhs) const
 	{	return x*rhs.x + y*rhs.y + z*rhs.z;	}
 	
 	void Normalize();
 	VECTOR3D GetNormalized() const;
 	
-	float GetLength() const
-	{	return (float)sqrt((x*x)+(y*y)+(z*z));	}
+	double GetLength() const
+	{	return (double)sqrt((x*x)+(y*y)+(z*z));	}
 	
-	float GetSquaredLength() const
+	double GetSquaredLength() const
 	{	return (x*x)+(y*y)+(z*z);	}
-
+	double distanceToPoint(const VECTOR3D& point) const
+	{
+		VECTOR3D tem(x - point.GetX(), y - point.GetY(), z - point.GetZ());
+		return tem.GetLength();
+	}
+	double distanceToPointSqr(const VECTOR3D& point) const
+	{
+		VECTOR3D tem(x - point.GetX(), y - point.GetY(), z - point.GetZ());
+		return tem.GetSquaredLength();
+	}
 	//rotations
 	void RotateX(double angle);
 	VECTOR3D GetRotatedX(double angle) const;
@@ -82,10 +91,10 @@ public:
 	VECTOR3D GetPackedTo01() const;
 
 	//linear interpolate
-	VECTOR3D lerp(const VECTOR3D & v2, float factor) const
+	VECTOR3D lerp(const VECTOR3D & v2, double factor) const
 	{	return (*this)*(1.0f-factor) + v2*factor;	}
 
-	VECTOR3D QuadraticInterpolate(const VECTOR3D & v2, const VECTOR3D & v3, float factor) const
+	VECTOR3D QuadraticInterpolate(const VECTOR3D & v2, const VECTOR3D & v3, double factor) const
 	{	return (*this)*(1.0f-factor)*(1.0f-factor) + 2*v2*factor*(1.0f-factor) + v3*factor*factor;}
 
 
@@ -97,10 +106,10 @@ public:
 	VECTOR3D operator-(const VECTOR3D & rhs) const
 	{	return VECTOR3D(x - rhs.x, y - rhs.y, z - rhs.z);	}
 
-	VECTOR3D operator*(const float rhs) const
+	VECTOR3D operator*(const double rhs) const
 	{	return VECTOR3D(x*rhs, y*rhs, z*rhs);	}
 	
-	VECTOR3D operator/(const float rhs) const
+	VECTOR3D operator/(const double rhs) const
 	{	return (rhs==0.0f) ? VECTOR3D(0.0f, 0.0f, 0.0f) : VECTOR3D(x / rhs, y / rhs, z / rhs);	}
 
 	//multiply by a float, eg 3*v
@@ -132,29 +141,40 @@ public:
 	void operator-=(const VECTOR3D & rhs)
 	{	x-=rhs.x;	y-=rhs.y;	z-=rhs.z;	}
 
-	void operator*=(const float rhs)
+	void operator*=(const double rhs)
 	{	x*=rhs;	y*=rhs;	z*=rhs;	}
 	
-	void operator/=(const float rhs)
+	void operator/=(const double rhs)
 	{	if(rhs==0.0f)
 			return;
 		else
 		{	x/=rhs; y/=rhs; z/=rhs;	}
 	}
-
+	double& operator[](int index)
+	{
+		if (index == 0)
+			return x;
+		else if (index == 1)
+			return y;
+		else if (index == 2)
+			return z;
+		else
+			throw "index out of range£¡";
+	}
 
 	//unary operators
 	VECTOR3D operator-(void) const {return VECTOR3D(-x, -y, -z);}
 	VECTOR3D operator+(void) const {return *this;}
 
-	//cast to pointer to a (float *) for glVertex3fv etc
-	operator float* () const {return (float*) this;}
-	operator const float* () const {return (const float*) this;}
-
+	//cast to pointer to a (double *) for glVertex3fv etc
+	operator double* () const {return (double*) this;}
+	//operator double* () const { return (double*)this; }
+	//operator const double* () const {return (const double*) this;}
+	//operator const double* () const { return (const double*)this; }
 	//member variables
-	float x;
-	float y;
-	float z;
+	double x;
+	double y;
+	double z;
 };
 
 #endif	//VECTOR3D_H

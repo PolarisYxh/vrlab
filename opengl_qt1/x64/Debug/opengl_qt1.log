@@ -1,2 +1,3 @@
-﻿  QtFunctionWidget1.cpp
+﻿  Obj2MassSpring.cpp
+D:\homework\vrlab\opengl_qt1\raypicking.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   opengl_qt1.vcxproj -> D:\homework\vrlab\opengl_qt1\x64\Debug\opengl_qt1.exe

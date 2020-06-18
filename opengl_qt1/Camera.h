@@ -4,7 +4,7 @@
 #include <QVector3D>
 #include <QMatrix4x4>
 #include <QKeyEvent>
-
+#include "glm/glm.hpp"
 // Defines several possible options for camera movement. Used as abstraction to stay away from window-system specific input methods
 enum Camera_Movement {
   FORWARD,

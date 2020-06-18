@@ -54,7 +54,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\homework\vrlab\opengl_qt1\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x64);$(LibraryPath)</LibraryPath>
     <ReferencePath>$(VC_LibraryPath_x64);$(ReferencePath)</ReferencePath>
   </PropertyGroup>
@@ -79,14 +79,14 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <AdditionalIncludeDirectories>D:\homework\vrlab\opengl_qt1\Maths;D:\homework\vrlab\opengl_qt1\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\homework\vrlab\opengl_qt1\Maths;D:\homework\vrlab\opengl_qt1\SoftDeformCode\include;D:\homework\vrlab\opengl_qt1\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\homework\vrlab\opengl_qt1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glu32.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>freeglut.lib;glu32.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
@@ -124,8 +124,21 @@
     <ClCompile Include="Maths\VECTOR2D.cpp" />
     <ClCompile Include="Maths\VECTOR3D.cpp" />
     <ClCompile Include="Maths\VECTOR4D.cpp" />
+    <ClCompile Include="Obj2MassSpring.cpp" />
     <ClCompile Include="opengl_qt1.cpp" />
     <ClCompile Include="QtFunctionWidget1.cpp" />
+    <ClCompile Include="raypicking.cpp" />
+    <ClCompile Include="SoftDeformCode\src\GLM.cpp" />
+    <ClCompile Include="SoftDeformCode\src\HapticDeviceConstraint.cpp" />
+    <ClCompile Include="SoftDeformCode\src\MouseForceConstraint.cpp" />
+    <ClCompile Include="SoftDeformCode\src\MouseSpringConstraint.cpp" />
+    <ClCompile Include="SoftDeformCode\src\NailConstraint.cpp" />
+    <ClCompile Include="SoftDeformCode\src\OdeSolver.cpp" />
+    <ClCompile Include="SoftDeformCode\src\Particle.cpp" />
+    <ClCompile Include="SoftDeformCode\src\ParticleSystem.cpp" />
+    <ClCompile Include="SoftDeformCode\src\SpringConstraint.cpp" />
+    <ClCompile Include="SoftDeformCode\src\tga.cpp" />
+    <ClCompile Include="SoftDeformCode\src\UnProjectUtilities.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="TIMER.cpp" />
   </ItemGroup>
@@ -144,7 +157,23 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="includes\stb_image.h" />
     <ClInclude Include="mass-spring.h" />
+    <ClInclude Include="Maths\VECTOR3D.h" />
+    <ClInclude Include="Obj2MassSpring.h" />
     <ClInclude Include="QtFunctionWidget1.h" />
+    <ClInclude Include="raypicking.h" />
+    <ClInclude Include="SoftDeformCode\include\Constraint.h" />
+    <ClInclude Include="SoftDeformCode\include\DynamicsMath.h" />
+    <ClInclude Include="SoftDeformCode\include\GLM.h" />
+    <ClInclude Include="SoftDeformCode\include\HapticDeviceConstraint.h" />
+    <ClInclude Include="SoftDeformCode\include\MouseForceConstraint.h" />
+    <ClInclude Include="SoftDeformCode\include\MouseSpringConstraint.h" />
+    <ClInclude Include="SoftDeformCode\include\NailConstraint.h" />
+    <ClInclude Include="SoftDeformCode\include\OdeSolver.h" />
+    <ClInclude Include="SoftDeformCode\include\Particle.h" />
+    <ClInclude Include="SoftDeformCode\include\ParticleSystem.h" />
+    <ClInclude Include="SoftDeformCode\include\SpringConstraint.h" />
+    <ClInclude Include="SoftDeformCode\include\tga.h" />
+    <ClInclude Include="SoftDeformCode\include\UnProjectUtilities.h" />
     <ClInclude Include="SPRING.h" />
     <ClInclude Include="TIMER.h" />
   </ItemGroup>

@@ -412,19 +412,19 @@ void MassSpring::RenderFrame(double currentTime, double timePassed)
 			{
 				for (int j = 0; j < gridSize - 1; ++j)
 				{
-					glNormal3fv(currentBalls[i * gridSize + j].normal);
-					glVertex3fv(currentBalls[i * gridSize + j].position);
-					glNormal3fv(currentBalls[i * gridSize + j + 1].normal);
-					glVertex3fv(currentBalls[i * gridSize + j + 1].position);
-					glNormal3fv(currentBalls[(i + 1) * gridSize + j].normal);
-					glVertex3fv(currentBalls[(i + 1) * gridSize + j].position);
+					glNormal3dv(currentBalls[i * gridSize + j].normal);
+					glVertex3dv(currentBalls[i * gridSize + j].position);
+					glNormal3dv(currentBalls[i * gridSize + j + 1].normal);
+					glVertex3dv(currentBalls[i * gridSize + j + 1].position);
+					glNormal3dv(currentBalls[(i + 1) * gridSize + j].normal);
+					glVertex3dv(currentBalls[(i + 1) * gridSize + j].position);
 
-					glNormal3fv(currentBalls[(i + 1) * gridSize + j].normal);
-					glVertex3fv(currentBalls[(i + 1) * gridSize + j].position);
-					glNormal3fv(currentBalls[i * gridSize + j + 1].normal);
-					glVertex3fv(currentBalls[i * gridSize + j + 1].position);
-					glNormal3fv(currentBalls[(i + 1) * gridSize + j + 1].normal);
-					glVertex3fv(currentBalls[(i + 1) * gridSize + j + 1].position);
+					glNormal3dv(currentBalls[(i + 1) * gridSize + j].normal);
+					glVertex3dv(currentBalls[(i + 1) * gridSize + j].position);
+					glNormal3dv(currentBalls[i * gridSize + j + 1].normal);
+					glVertex3dv(currentBalls[i * gridSize + j + 1].position);
+					glNormal3dv(currentBalls[(i + 1) * gridSize + j + 1].normal);
+					glVertex3dv(currentBalls[(i + 1) * gridSize + j + 1].position);
 				}
 			}
 		}
@@ -453,10 +453,10 @@ void MassSpring::RenderFrame(double currentTime, double timePassed)
 		{
 			for (int j = 0; j < gridSize - 1; j += 3)
 			{
-				glMap2f(GL_MAP2_VERTEX_3, 0.0f, 1.0f, sizeof(BALL) / sizeof(float), 4,
+				glMap2d(GL_MAP2_VERTEX_3, 0.0f, 1.0f, sizeof(BALL) / sizeof(float), 4,
 					0.0f, 1.0f, gridSize * sizeof(BALL) / sizeof(float), 4,
 					currentBalls[i * gridSize + j].position);
-				glMap2f(GL_MAP2_NORMAL, 0.0f, 1.0f, sizeof(BALL) / sizeof(float), 4,
+				glMap2d(GL_MAP2_NORMAL, 0.0f, 1.0f, sizeof(BALL) / sizeof(float), 4,
 					0.0f, 1.0f, gridSize * sizeof(BALL) / sizeof(float), 4,
 					currentBalls[i * gridSize + j].normal);
 				glMapGrid2f(patchTesselation, 0.0f, 1.0f, patchTesselation, 0.0f, 1.0f);
@@ -480,7 +480,7 @@ void MassSpring::RenderFrame(double currentTime, double timePassed)
 		glBegin(GL_POINTS);
 		{
 			for (int i = 0; i < numBalls; ++i)
-				glVertex3fv(currentBalls[i].position);
+				glVertex3dv(currentBalls[i].position);
 		}
 		glEnd();
 	}
@@ -502,8 +502,8 @@ void MassSpring::RenderFrame(double currentTime, double timePassed)
 				if (springs[i].ball1 != -1 && springs[i].ball2 != -1 &&
 					springs[i].ball1 < numBalls && springs[i].ball2 < numBalls)
 				{
-					glVertex3fv(currentBalls[springs[i].ball1].position);
-					glVertex3fv(currentBalls[springs[i].ball2].position);
+					glVertex3dv(currentBalls[springs[i].ball1].position);
+					glVertex3dv(currentBalls[springs[i].ball2].position);
 				}
 			}
 		}

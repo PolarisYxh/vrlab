@@ -7,7 +7,7 @@
 #include <glad/glad.h> 
 #include <QDebug>
 #include "TIMER.h"
-#include "COLOR.h"
+#include "Maths/COLOR.h"
 #include <GL/glu.h>
 #include "VECTOR3D.h"
 class MassSpring

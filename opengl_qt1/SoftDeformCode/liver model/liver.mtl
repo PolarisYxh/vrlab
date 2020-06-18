@@ -1,0 +1,9 @@
+newmtl initialShadingGroup
+illum 4
+Ka 0.10 0.10 0.10
+Kd 1.00 1.00 1.00
+Ks  0.50 0.50 0.50
+Tf 1.00 1.00 1.00
+Ni 1.00
+map_Ka 		organs_l.jpg
+map_Kd      organs_l.jpg

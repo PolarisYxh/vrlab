@@ -64,7 +64,6 @@ public:
         // now that we have all the required data, set the vertex buffers and its attribute pointers.
         setupMesh();
     }
-
     // render the mesh
     void Draw(Shader shader) 
     {
@@ -100,11 +99,14 @@ public:
 		glBindBufferRange(GL_UNIFORM_BUFFER, 0, uniformBlockIndex, 0, sizeof(Material));
         glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
-
+		//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         // always good practice to set everything back to defaults once configured.
         glActiveTexture(GL_TEXTURE0);
     }
-
+	void ChangeVertex()
+	{
+		setupMesh();
+	}
 private:
     /*  Render data  */
     GLuint VBO, EBO;

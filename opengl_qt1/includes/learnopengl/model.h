@@ -43,7 +43,9 @@ public:
 	void Draw(Shader shader)
 	{
 		for (unsigned int i = 0; i < meshes.size(); i++)
+		{
 			meshes[i].Draw(shader);
+		}
 	}
 
 private:
@@ -83,7 +85,6 @@ private:
 		{
 			processNode(node->mChildren[i], scene);
 		}
-
 	}
 
 	Mesh processMesh(aiMesh* mesh, const aiScene* scene)
@@ -230,6 +231,7 @@ unsigned int TextureFromFile(const char* path, const string& directory, bool gam
 	glGenTextures(1, &textureID);
 
 	int width, height, nrComponents;
+	stbi_set_flip_vertically_on_load(true);//yÖá·­×ªÍ¼Æ¬£¬¿ÉÒÔ×¢ÊÍ
 	unsigned char* data = stbi_load(filename.c_str(), &width, &height, &nrComponents, 0);
 	if (data)
 	{

@@ -8,7 +8,8 @@ opengl_qt1::opengl_qt1(QWidget *parent)
 	//myopengl = new CoreFunctionWidget(this);
 	//myopengl = new QtFunctionWidget(this);
 	//std::string a = "./Resources/objects/dog/dog.obj";
-	std::string a = "./Resources/objects/nanosuit/nanosuit.obj";
+	//std::string a = "./Resources/objects/nanosuit/nanosuit.obj";
+	std::string a = "./SoftDeformCode/liver model/liver.obj";
 	//std:: string b = "./shader/1.model_loading.vs";
 	//std::string c = "./shader/1.model_loading.fs";//single texture
 	//std::string b = "./shader/textures.vs";
@@ -30,9 +31,9 @@ opengl_qt1::opengl_qt1(QWidget *parent)
 	totalLayout->addLayout(leftLayout);
 	totalLayout->addLayout(middleLayout);
 	totalLayout->addLayout(rightLayout);
-	totalLayout->setStretchFactor(leftLayout, 95);
+	totalLayout->setStretchFactor(leftLayout, 0);
 	totalLayout->setStretchFactor(middleLayout, 835);
-	totalLayout->setStretchFactor(rightLayout, 60);
+	totalLayout->setStretchFactor(rightLayout, 0);
 
 	widget->setLayout(totalLayout);
 	setCentralWidget(widget);

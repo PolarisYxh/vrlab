@@ -17,7 +17,7 @@ static char THIS_FILE[]=__FILE__;
 
 CArcBall::CArcBall() :
 m_bDragging(false),
-m_dRadius(1000.0),
+m_dRadius(800.0),
 m_vec2Center(0.0,0.0),
 m_vec2Down(0.0,0.0),
 m_vec2Now(0.0,0.0),
