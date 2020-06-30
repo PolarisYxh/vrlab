@@ -1,1 +1,2 @@
-正常流程的opengl
+soft deform cuda not ok
+见演示视频

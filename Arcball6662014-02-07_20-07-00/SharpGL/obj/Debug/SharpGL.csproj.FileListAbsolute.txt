@@ -1,5 +1,0 @@
-D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL\bin\Debug\SharpGL.dll
-D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL\bin\Debug\SharpGL.pdb
-D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL\obj\Debug\SharpGL.csprojAssemblyReference.cache
-D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL\obj\Debug\SharpGL.dll
-D:\homework\vrlab\Arcball6662014-02-07_20-07-00\SharpGL\obj\Debug\SharpGL.pdb

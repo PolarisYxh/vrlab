@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="SPH">
+      <UniqueIdentifier>{0398d0c7-7afa-42af-b905-9130faf5f0da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shader">
+      <UniqueIdentifier>{8f541f34-63d3-492a-b875-6616cebbbe55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MC">
+      <UniqueIdentifier>{4a40caf6-88ab-4e49-a4e7-4815fa17c0fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FLIP">
+      <UniqueIdentifier>{2d74b3bb-02bf-4535-8f3f-e133413008ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Voronoi3D">
+      <UniqueIdentifier>{9851750c-354c-4c9a-967b-beab450bf8f1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SPH.cpp">
+      <Filter>SPH</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Utility.cpp">
+      <Filter>shader</Filter>
+    </ClCompile>
+    <ClCompile Include="MC.cpp">
+      <Filter>MC</Filter>
+    </ClCompile>
+    <ClCompile Include="FLIP.cpp">
+      <Filter>FLIP</Filter>
+    </ClCompile>
+    <ClCompile Include="Voronoi3D.cpp">
+      <Filter>Voronoi3D</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SPH.h">
+      <Filter>SPH</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h" />
+    <ClInclude Include="Utility.h">
+      <Filter>shader</Filter>
+    </ClInclude>
+    <ClInclude Include="MC.h">
+      <Filter>MC</Filter>
+    </ClInclude>
+    <ClInclude Include="tables.h">
+      <Filter>MC</Filter>
+    </ClInclude>
+    <ClInclude Include="FLIP.h">
+      <Filter>FLIP</Filter>
+    </ClInclude>
+    <ClInclude Include="Voronoi3D.h">
+      <Filter>Voronoi3D</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="SPH.cu">
+      <Filter>SPH</Filter>
+    </CudaCompile>
+    <CudaCompile Include="vbo.cu" />
+    <CudaCompile Include="MC.cu">
+      <Filter>MC</Filter>
+    </CudaCompile>
+    <CudaCompile Include="FLIP.cu">
+      <Filter>FLIP</Filter>
+    </CudaCompile>
+    <CudaCompile Include="Voronoi3D.cu">
+      <Filter>Voronoi3D</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="particles.frag">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="particles.vert">
+      <Filter>shader</Filter>
+    </None>
+  </ItemGroup>
+</Project>

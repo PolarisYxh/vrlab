@@ -1,0 +1,52 @@
+﻿  main.cpp
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_runtime_api.h(9349,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_runtime_api.h(9349,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_runtime_api.h(9349,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_runtime_api.h(9349,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_runtime_api.h(9349,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\common\inc\helper_math.h(1381,39): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\common\inc\helper_math.h(1381,28): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\common\inc\helper_math.h(1385,50): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\common\inc\helper_math.h(1385,39): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\common\inc\helper_math.h(1385,28): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\common\inc\helper_math.h(1389,61): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\common\inc\helper_math.h(1389,50): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\common\inc\helper_math.h(1389,39): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\common\inc\helper_math.h(1389,28): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_runtime_api.h(9349,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\SPH.h(4,1): warning C4005: “DFSPH”: 宏重定义
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp : message : 参见“DFSPH”的前一个定义
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(60,1): warning C4996: 'cudaGLRegisterBufferObject': 被声明为已否决
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_gl_interop.h(327): message : 参见“cudaGLRegisterBufferObject”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(68,1): warning C4996: 'cudaGLUnregisterBufferObject': 被声明为已否决
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_gl_interop.h(404): message : 参见“cudaGLUnregisterBufferObject”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(113,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : 参见“fopen”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(115,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : 参见“fopen”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(193,1): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1774): message : 参见“sprintf”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(255,1): warning C4996: 'cudaGLMapBufferObject': 被声明为已否决
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_gl_interop.h(356): message : 参见“cudaGLMapBufferObject”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(256,1): warning C4996: 'cudaGLMapBufferObject': 被声明为已否决
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_gl_interop.h(356): message : 参见“cudaGLMapBufferObject”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(262,1): warning C4996: 'cudaGLUnmapBufferObject': 被声明为已否决
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_gl_interop.h(382): message : 参见“cudaGLUnmapBufferObject”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(263,1): warning C4996: 'cudaGLUnmapBufferObject': 被声明为已否决
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_gl_interop.h(382): message : 参见“cudaGLUnmapBufferObject”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(285,1): warning C4996: 'cudaGLMapBufferObject': 被声明为已否决
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_gl_interop.h(356): message : 参见“cudaGLMapBufferObject”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(286,1): warning C4996: 'cudaGLMapBufferObject': 被声明为已否决
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_gl_interop.h(356): message : 参见“cudaGLMapBufferObject”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(288,1): warning C4996: 'cudaGLUnmapBufferObject': 被声明为已否决
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_gl_interop.h(382): message : 参见“cudaGLUnmapBufferObject”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(289,1): warning C4996: 'cudaGLUnmapBufferObject': 被声明为已否决
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include\cuda_gl_interop.h(382): message : 参见“cudaGLUnmapBufferObject”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(307,1): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1774): message : 参见“sprintf”的声明
+D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\fluidsParticles\main.cpp(323,9): warning C4101: “filename”: 未引用的局部变量
+  fluidsParticles.vcxproj -> D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\x64\Debug\fluidsParticles.exe
+  copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\cudart*.dll" "D:\homework\虚拟现实技术作业\物理建模仿真实验--李帅\fluidsparticles\x64\Debug\"
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\cudart32_102.dll
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\cudart64_102.dll
+  已复制         2 个文件。

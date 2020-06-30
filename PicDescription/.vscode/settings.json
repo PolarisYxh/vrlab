@@ -1,0 +1,22 @@
+{
+        // Workspace Settings
+
+    // virtual environments 中的 python 執行檔
+    // "python.pythonPath": "C:\\Users\\twtru\\OneDrive\\work\\venv\\venv_demo\\Scripts\\python.exe",
+
+    // 可以設定你放全部的 venvs 環境的根目錄資料夾
+    //"python.venvPath": "C:\\Users\\twtru\\OneDrive\\work\\venv",
+
+    "python.terminal.activateEnvironment": true, // 自動啟動環境
+    "python.linting.pylintEnabled": true,  // 需要 pip install pylint
+    "python.linting.enabled": true,  // 需要 pip install pylint
+
+    "python.autoComplete.extraPaths": [
+        "C:\\Users\\yxh\\Miniconda3\\Scripts",
+        "C:\\Users\\yxh\\Miniconda3\\Lib",  // 設定你的 venv 的環境目錄資料夾，為了偵測一些 python library
+        "C:\\Users\\yxh\\Miniconda3\\envs\\Pic\\lib\\site-packages\\",
+    ],
+    "python.autoComplete.addBrackets": true,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "python.pythonPath": "C:\\Users\\yxh\\Miniconda3\\envs\\Pic\\python.exe"
+}
